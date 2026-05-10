@@ -28,8 +28,6 @@
 
         <dependency>
             <groupId>com.github.xiaoymin</groupId>
-            <artifactId>knife4j-openapi3-jakarta</artifactId>
-            <version>${knife4j.version}</version>
         </dependency>
 
         <dependency>
