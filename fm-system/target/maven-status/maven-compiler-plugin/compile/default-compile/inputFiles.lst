@@ -1,0 +1,13 @@
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/entity/SysUser.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/entity/SysOrg.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/controller/SysOrgController.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/service/impl/SysOrgServiceImpl.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/mapper/SysOrgMapper.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/service/impl/SysRoleServiceImpl.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/service/impl/SysUserServiceImpl.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/service/SysRoleService.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/service/SysUserService.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/service/SysOrgService.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/mapper/SysUserMapper.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/entity/SysRole.java
+/home/ctyun/projects/formula-management/fm-system/src/main/java/com/jianhua/fm/system/mapper/SysRoleMapper.java

@@ -1,0 +1,6 @@
+com/jianhua/fm/common/utils/R.class
+com/jianhua/fm/common/config/MybatisPlusConfig.class
+com/jianhua/fm/common/constant/SysConstant.class
+com/jianhua/fm/common/entity/BaseEntity.class
+com/jianhua/fm/common/enums/DataStatus.class
+com/jianhua/fm/common/enums/ResultCode.class

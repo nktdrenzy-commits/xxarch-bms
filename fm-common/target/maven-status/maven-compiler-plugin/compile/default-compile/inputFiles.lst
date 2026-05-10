@@ -1,0 +1,6 @@
+/home/ctyun/projects/formula-management/fm-common/src/main/java/com/jianhua/fm/common/entity/BaseEntity.java
+/home/ctyun/projects/formula-management/fm-common/src/main/java/com/jianhua/fm/common/enums/ResultCode.java
+/home/ctyun/projects/formula-management/fm-common/src/main/java/com/jianhua/fm/common/config/MybatisPlusConfig.java
+/home/ctyun/projects/formula-management/fm-common/src/main/java/com/jianhua/fm/common/enums/DataStatus.java
+/home/ctyun/projects/formula-management/fm-common/src/main/java/com/jianhua/fm/common/constant/SysConstant.java
+/home/ctyun/projects/formula-management/fm-common/src/main/java/com/jianhua/fm/common/utils/R.java
