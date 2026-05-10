@@ -2,6 +2,7 @@ package com.jianhua.fm.basic.entity;
 
 import com.jianhua.fm.common.entity.BaseEntity;
 import lombok.Data;
+import com.jianhua.fm.common.entity.BaseEntity;
 import lombok.EqualsAndHashCode;
 
 /**
