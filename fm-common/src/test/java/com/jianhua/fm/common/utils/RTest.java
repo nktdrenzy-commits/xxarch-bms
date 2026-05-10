@@ -10,30 +10,36 @@ class RTest {
 
     @Test
     void testOk() {
-        R result = R.ok();
+        R<?> result = R.ok();
         assertNotNull(result);
-        assertEquals(0, result.get("code"));
+        assertEquals(200, result.getCode());
     }
 
     @Test
     void testOkWithData() {
-        R result = R.ok("testData");
+        R<String> result = R.ok("testData");
         assertNotNull(result);
-        assertEquals("testData", result.get("data"));
+        assertEquals("testData", result.getData());
     }
 
     @Test
     void testFail() {
-        R result = R.fail("error msg");
+        R<?> result = R.fail("error msg");
         assertNotNull(result);
-        assertEquals(500, result.get("code"));
-        assertEquals("error msg", result.get("msg"));
+        assertEquals(500, result.getCode());
+        assertEquals("error msg", result.getMessage());
     }
 
     @Test
     void testFailWithCode() {
-        R result = R.fail(400, "bad request");
-        assertEquals(400, result.get("code"));
-        assertEquals("bad request", result.get("msg"));
+        R<?> result = R.fail(400, "bad request");
+        assertEquals(400, result.getCode());
+        assertEquals("bad request", result.getMessage());
+    }
+
+    @Test
+    void testTimestamp() {
+        R<?> result = R.ok();
+        assertTrue(result.getTimestamp() > 0);
     }
 }
