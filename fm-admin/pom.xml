@@ -65,10 +65,6 @@
             <scope>runtime</scope>
         </dependency>
 
-        <!-- Knife4j -->
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-        </dependency>
     </dependencies>
 
     <build>

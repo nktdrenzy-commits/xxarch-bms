@@ -26,9 +26,6 @@
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
 
-        <dependency>
-            <groupId>com.github.xiaoymin</groupId>
-        </dependency>
 
         <dependency>
             <groupId>org.projectlombok</groupId>
