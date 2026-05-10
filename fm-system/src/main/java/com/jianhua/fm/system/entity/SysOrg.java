@@ -1,4 +1,4 @@
-package com.jianhua.fm.common.entity;
+package com.jianhua.fm.system.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
