@@ -11,14 +11,20 @@ import static org.junit.jupiter.api.Assertions.*;
 class BomMainTest {
 
     @Test
-    void testBomMainHasCalcObjectId() throws Exception {
-        Field field = BomMain.class.getDeclaredField("calcObjectId");
+    void testBomMainHasBomCode() throws Exception {
+        Field field = BomMain.class.getDeclaredField("bomCode");
         assertNotNull(field);
     }
 
     @Test
     void testBomMainHasBomName() throws Exception {
         Field field = BomMain.class.getDeclaredField("bomName");
+        assertNotNull(field);
+    }
+
+    @Test
+    void testBomMainHasBomType() throws Exception {
+        Field field = BomMain.class.getDeclaredField("bomType");
         assertNotNull(field);
     }
 
