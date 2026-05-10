@@ -1,5 +1,6 @@
 package com.jianhua.fm.bom.entity;
 
+import com.jianhua.fm.common.entity.BaseEntity;
 import org.junit.jupiter.api.Test;
 import java.lang.reflect.Field;
 import static org.junit.jupiter.api.Assertions.*;
