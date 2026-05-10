@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
+<head>
+    <title>工作台 - 配方管理系统</title>
+</head>
+<body>
+    <!-- 工作台首页 -->
+    <div class="stats">
+        <div class="stat-card">
+            <div class="stat-label">组织总数</div>
+            <div class="stat-value">12</div>
+            <div class="stat-change up">↑ 较上周 +3</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">工厂数</div>
+            <div class="stat-value">5</div>
+            <div class="stat-change">-</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">物料种类</div>
+            <div class="stat-value">1,286</div>
+            <div class="stat-change up">↑ 较上周 +52</div>
+        </div>
+        <div class="stat-card">
+            <div class="stat-label">BOM配方</div>
+            <div class="stat-value">328</div>
+            <div class="stat-change up">↑ 较上周 +15</div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title">最近操作</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>操作时间</th>
+                    <th>操作人</th>
+                    <th>操作类型</th>
+                    <th>描述</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>2026-05-10 10:30</td>
+                    <td>管理员</td>
+                    <td>新增</td>
+                    <td>新增组织"华东区域总部"</td>
+                </tr>
+                <tr>
+                    <td>2026-05-10 09:15</td>
+                    <td>管理员</td>
+                    <td>修改</td>
+                    <td>更新BOM配方"普通混凝土C30"</td>
+                </tr>
+                <tr>
+                    <td>2026-05-09 16:40</td>
+                    <td>管理员</td>
+                    <td>新增</td>
+                    <td>新增物料"水泥 P.O 42.5"</td>
+                </tr>
+                <tr>
+                    <td>2026-05-09 14:20</td>
+                    <td>管理员</td>
+                    <td>审核</td>
+                    <td>审核通过BOM"机制砂中砂"</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="card">
+        <div class="card-title">快捷操作</div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+            <button class="btn btn-primary">新建组织</button>
+            <button class="btn btn-default">新建物料</button>
+            <button class="btn btn-default">新建BOM</button>
+            <button class="btn btn-default">导入数据</button>
+            <button class="btn btn-default">导出报表</button>
+        </div>
+    </div>
+</body>
+</html>

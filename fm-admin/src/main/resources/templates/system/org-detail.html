@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
+<head>
+    <title>组织详情 - 配方管理系统</title>
+</head>
+<body>
+    <!-- 详情页 - 组织详情 -->
+    <div class="card">
+        <div class="detail-header">
+            <div class="detail-title">组织详情</div>
+            <div class="action-btns">
+                <button class="btn btn-default">← 返回列表</button>
+                <button class="btn btn-primary">编辑</button>
+            </div>
+        </div>
+        
+        <div class="info-grid">
+            <div class="info-item">
+                <div class="info-label">组织编码</div>
+                <div class="info-value">FACTORY_001</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">组织名称</div>
+                <div class="info-value">华东生产基地</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">组织类型</div>
+                <div class="info-value">工厂</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">上级组织</div>
+                <div class="info-value">建华建材集团</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">排序</div>
+                <div class="info-value">1</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">数据状态</div>
+                <div class="info-value" style="color: #52C41A;">正常</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">创建时间</div>
+                <div class="info-value">2026-01-15 10:30:00</div>
+            </div>
+            <div class="info-item">
+                <div class="info-label">创建人</div>
+                <div class="info-value">管理员</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="card">
+        <div class="card-title">关联信息</div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>关联类型</th>
+                    <th>名称</th>
+                    <th>数量</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>下级组织</td>
+                    <td>混凝土车间A、混凝土车间B</td>
+                    <td>2</td>
+                    <td><a href="#" style="color: var(--primary);">查看</a></td>
+                </tr>
+                <tr>
+                    <td>物料</td>
+                    <td>关联物料</td>
+                    <td>156</td>
+                    <td><a href="#" style="color: var(--primary);">查看</a></td>
+                </tr>
+                <tr>
+                    <td>BOM配方</td>
+                    <td>使用中的配方</td>
+                    <td>42</td>
+                    <td><a href="#" style="color: var(--primary);">查看</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

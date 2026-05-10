@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="~{layout :: content}">
+<head>
+    <title>组织管理 - 配方管理系统</title>
+</head>
+<body>
+    <!-- 列表页 - 组织管理 -->
+    <div class="card">
+        <div class="toolbar">
+            <div>
+                <input type="text" class="search-input" placeholder="搜索组织名称/编码...">
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-primary">+ 新增组织</button>
+                <button class="btn btn-default">导出</button>
+                <button class="btn btn-default">导入</button>
+            </div>
+        </div>
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th><input type="checkbox"></th>
+                    <th>组织编码</th>
+                    <th>组织名称</th>
+                    <th>组织类型</th>
+                    <th>上级组织</th>
+                    <th>排序</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>GROUP_001</td>
+                    <td>建华建材集团</td>
+                    <td><span style="color: var(--primary);">集团</span></td>
+                    <td>-</td>
+                    <td>1</td>
+                    <td><span style="color: #52C41A;">正常</span></td>
+                    <td>
+                        <a href="#" style="color: var(--primary); margin-right: 12px;">编辑</a>
+                        <a href="#" style="color: var(--primary);">详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>FACTORY_001</td>
+                    <td>华东生产基地</td>
+                    <td><span style="color: #52C41A;">工厂</span></td>
+                    <td>建华建材集团</td>
+                    <td>1</td>
+                    <td><span style="color: #52C41A;">正常</span></td>
+                    <td>
+                        <a href="#" style="color: var(--primary); margin-right: 12px;">编辑</a>
+                        <a href="#" style="color: var(--primary);">详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>FACTORY_002</td>
+                    <td>华南生产基地</td>
+                    <td><span style="color: #52C41A;">工厂</span></td>
+                    <td>建华建材集团</td>
+                    <td>2</td>
+                    <td><span style="color: #52C41A;">正常</span></td>
+                    <td>
+                        <a href="#" style="color: var(--primary); margin-right: 12px;">编辑</a>
+                        <a href="#" style="color: var(--primary);">详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>WORKSHOP_001</td>
+                    <td>混凝土车间A</td>
+                    <td><span style="color: #FA8C16;">车间</span></td>
+                    <td>华东生产基地</td>
+                    <td>1</td>
+                    <td><span style="color: #52C41A;">正常</span></td>
+                    <td>
+                        <a href="#" style="color: var(--primary); margin-right: 12px;">编辑</a>
+                        <a href="#" style="color: var(--primary);">详情</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"></td>
+                    <td>WORKSHOP_002</td>
+                    <td>混凝土车间B</td>
+                    <td><span style="color: #FA8C16;">车间</span></td>
+                    <td>华东生产基地</td>
+                    <td>2</td>
+                    <td><span style="color: #52C41A;">正常</span></td>
+                    <td>
+                        <a href="#" style="color: var(--primary); margin-right: 12px;">编辑</a>
+                        <a href="#" style="color: var(--primary);">详情</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div class="toolbar" style="margin-top: 16px;">
+            <div style="color: var(--text-light); font-size: 14px;">
+                共 5 条，当前第 1/1 页
+            </div>
+            <div class="action-btns">
+                <button class="btn btn-default">上一页</button>
+                <button class="btn btn-default">下一页</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
