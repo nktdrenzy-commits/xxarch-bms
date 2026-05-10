@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">建华建材配方管理系统</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --primary: #4A90D9;
+            --primary-light: #E8F1FB;
+            --text: #333;
+            --text-light: #666;
+            --border: #E5E5E5;
+            --bg: #F5F7FA;
+            --white: #fff;
+            --shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        /* 侧边栏 */
+        .sidebar {
+            width: 200px;
+            height: 100vh;
+            background: var(--white);
+            border-right: 1px solid var(--border);
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+        
+        .logo {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            border-bottom: 1px solid var(--border);
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--primary);
+        }
+        
+        .menu {
+            padding: 12px 0;
+        }
+        
+        .menu-title {
+            padding: 8px 20px;
+            font-size: 12px;
+            color: var(--text-light);
+            text-transform: uppercase;
+        }
+        
+        .menu-item {
+            display: block;
+            padding: 10px 20px;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .menu-item:hover {
+            background: var(--primary-light);
+            color: var(--primary);
+        }
+        
+        .menu-item.active {
+            background: var(--primary-light);
+            color: var(--primary);
+            border-right: 3px solid var(--primary);
+        }
+        
+        /* 主内容区 */
+        .main {
+            margin-left: 200px;
+            min-height: 100vh;
+        }
+        
+        .header {
+            height: 60px;
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+        }
+        
+        .header-title {
+            font-size: 18px;
+            font-weight: 500;
+        }
+        
+        .header-user {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .avatar {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+        }
+        
+        .content {
+            padding: 24px;
+        }
+        
+        /* 卡片 */
+        .card {
+            background: var(--white);
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        
+        .card-title {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+        
+        /* 统计卡片 */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        
+        .stat-card {
+            background: var(--white);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+        
+        .stat-value {
+            font-size: 28px;
+            font-weight: 600;
+            color: var(--text);
+        }
+        
+        .stat-change {
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        
+        .stat-change.up { color: #52C41A; }
+        .stat-change.down { color: #F5222D; }
+        
+        /* 表格 */
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .table th,
+        .table td {
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .table th {
+            background: var(--bg);
+            font-weight: 500;
+            font-size: 14px;
+            color: var(--text-light);
+        }
+        
+        .table tr:hover {
+            background: var(--primary-light);
+        }
+        
+        /* 按钮 */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            border: none;
+            transition: all 0.2s;
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background: #3A7BC8;
+        }
+        
+        .btn-default {
+            background: var(--white);
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        
+        .btn-default:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+        }
+        
+        .toolbar {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+        
+        .search-input {
+            padding: 8px 12px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            width: 240px;
+        }
+        
+        .action-btns {
+            display: flex;
+            gap: 8px;
+        }
+        
+        /* 详情 */
+        .detail-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+        }
+        
+        .detail-title {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .info-item {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .info-label {
+            font-size: 14px;
+            color: var(--text-light);
+            margin-bottom: 4px;
+        }
+        
+        .info-value {
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo">配方管理系统</div>
+        <div class="menu">
+            <div class="menu-title">工作台</div>
+            <a class="menu-item active" href="/dashboard">工作台</a>
+            <div class="menu-title">系统设置</div>
+            <a class="menu-item" href="/system/org">组织管理</a>
+            <a class="menu-item" href="/basic/factory">工厂管理</a>
+            <a class="menu-item" href="/basic/material">物料管理</a>
+            <div class="menu-title">BOM管理</div>
+            <a class="menu-item" href="/bom/main">BOM计算</a>
+            <a class="menu-item" href="/altlist">备选物料</a>
+        </div>
+    </div>
+    
+    <div class="main">
+        <div class="header">
+            <div class="header-title" th:text="${pageTitle}">工作台</div>
+            <div class="header-user">
+                <div class="avatar">管</div>
+                <span>管理员</span>
+            </div>
+        </div>
+        
+        <div class="content" th:replace="~{::content}">
+            <!-- 内容区 -->
+        </div>
+    </div>
+</body>
+</html>
